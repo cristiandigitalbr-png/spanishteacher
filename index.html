@@ -630,7 +630,7 @@ p { color: var(--color-ink-soft); }
 /* ============================================
    FAQ
    ============================================ */
-.faq { padding: 130px 0; background: var(--color-bg-alt); }
+.faq { padding: 90px 0; background: var(--color-bg-alt); }
 
 .faq-grid {
   display: grid;
@@ -675,7 +675,7 @@ p { color: var(--color-ink-soft); }
    FINAL CTA
    ============================================ */
 .final-cta {
-  padding: 140px 0;
+  padding: 100px 0;
   background: var(--color-ink);
   position: relative;
   overflow: hidden;
@@ -814,7 +814,7 @@ p { color: var(--color-ink-soft); }
   .visual-break-img { height: 42vh; min-height: 280px; }
   .visual-break-overlay { padding: 0 28px; background: linear-gradient(180deg, rgba(11,14,20,0.2), rgba(11,14,20,0.65)); align-items: flex-end; padding-bottom: 32px; }
 
-  .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+  .faq-grid { grid-template-columns: 1fr; gap: 24px; }
 
   .footer-inner { flex-direction: column; }
   .footer-links { align-items: flex-start; }
@@ -822,6 +822,10 @@ p { color: var(--color-ink-soft); }
 
 @media (max-width: 640px) {
   .container { padding: 0 22px; }
+  .benefits, .how-it-works, .curriculum, .testimonials, .about { padding: 72px 0; }
+  .faq { padding: 72px 0; }
+  .final-cta { padding: 80px 0; }
+  .benefits-grid, .steps, .curriculum-grid, .testimonials-grid { margin-top: 36px; }
   .benefits-grid { grid-template-columns: 1fr; }
   .curriculum-grid { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
