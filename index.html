@@ -305,6 +305,10 @@ p { color: var(--color-ink-soft); }
   position: relative;
 }
 
+.hero-copy {
+  text-align: center;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -312,21 +316,25 @@ p { color: var(--color-ink-soft); }
   align-items: center;
 }
 
+.hero-copy .eyebrow { justify-content: center; }
+
 .hero-sub {
   font-size: 1.16rem;
   max-width: 480px;
-  margin: 22px 0 34px;
+  margin: 22px auto 34px;
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-trust {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-top: 36px;
 }
