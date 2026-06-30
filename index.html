@@ -99,6 +99,12 @@ h1, h2, h3 {
 }
 
 h1 { font-size: clamp(2.6rem, 5.2vw, 4.4rem); line-height: 1.04; font-weight: 500; }
+h1 .flag-text {
+  background: linear-gradient(90deg, #C60B1E 0%, #C60B1E 22%, #FFC400 50%, #C60B1E 78%, #C60B1E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 h1 em { font-style: italic; font-weight: 400; color: var(--color-accent); }
 
 h2.section-title { font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.12; }
@@ -942,7 +948,7 @@ p { color: var(--color-ink-soft); }
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <span class="eyebrow">Online Spanish Lessons · 1-on-1</span>
-          <h1>Speak Spanish<br>like it's <em>yours.</em></h1>
+          <h1><span class="flag-text">Speak Spanish</span><br>like it's <em>yours.</em></h1>
           <p class="hero-sub">Personalized lessons for adults who want to travel, work, live, and connect across Latin America and Spain — built around real conversation, not rote memorization.</p>
           <div class="hero-actions">
             <a href="https://wa.me/5493385462953?text=Hi%20Cristian%21%20I%27m%20interested%20in%20learning%20Spanish" target="_blank" rel="noopener" class="btn btn-primary">Book your trial class</a>
