@@ -316,42 +316,32 @@ p { color: var(--color-ink-soft); }
 }
 
 .hero-stack {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-areas:
+    "copy visual"
+    "cta  visual";
+  column-gap: 64px;
+  row-gap: 28px;
   align-items: center;
-  gap: 48px;
 }
+.hero-copy { grid-area: copy; text-align: left; }
+.hero-visual { grid-area: visual; position: relative; width: 100%; max-width: 640px; }
+.hero-cta-block { grid-area: cta; }
 
-.hero-copy .eyebrow { justify-content: center; }
+.hero-copy .eyebrow { justify-content: flex-start; }
 
 .hero-sub {
   font-size: 1.16rem;
   max-width: 480px;
-  margin: 22px auto 34px;
+  margin: 22px 0 0;
 }
 
 .hero-actions {
   display: flex;
   gap: 16px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-}
-
-.hero-trust {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 36px;
-}
-.trust-stars { color: var(--color-accent); font-size: 0.95rem; letter-spacing: 2px; }
-.hero-trust p { font-size: 0.9rem; }
-.hero-trust strong { color: var(--color-ink); }
-
-.hero-visual {
-  position: relative;
-  width: 100%;
-  max-width: 640px;
 }
 
 .hero-photo-frame {
@@ -409,19 +399,45 @@ p { color: var(--color-ink-soft); }
 }
 
 /* ============================================
-   STRIP
+   TRUST STATS
    ============================================ */
-.strip {
+.trust-stats {
   border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
-  padding: 22px 0;
+  padding: 44px 0;
+  background: var(--color-bg);
 }
-.strip-inner p {
-  text-align: center;
-  font-size: 0.86rem;
+.trust-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+.trust-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.trust-stat-num {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--color-accent);
   letter-spacing: 0.02em;
+}
+.trust-stat-label {
   font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--color-ink-soft);
+}
+.trust-stat-divider {
+  width: 1px;
+  height: 38px;
+  background: var(--color-line);
 }
 
 /* ============================================
@@ -871,7 +887,20 @@ p { color: var(--color-ink-soft); }
   .hamburger { display: flex; }
 
   .hero { padding: 140px 0 80px; }
-  .hero-stack { gap: 36px; }
+  .hero-stack {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "visual"
+      "cta";
+    gap: 36px;
+    text-align: center;
+  }
+  .hero-copy { text-align: center; }
+  .hero-copy .eyebrow { justify-content: center; }
+  .hero-sub { margin: 22px auto 0; }
+  .hero-actions { justify-content: center; }
+  .hero-visual { max-width: 480px; margin: 0 auto; }
   .chalk-note { font-size: 1.05rem; padding: 8px 16px; }
   .chalk-note-1 { left: 0; top: -6%; }
   .chalk-note-2 { right: 0; bottom: -4%; }
@@ -889,6 +918,9 @@ p { color: var(--color-ink-soft); }
 }
 
 @media (max-width: 640px) {
+  .trust-stats-inner { gap: 28px; }
+  .trust-stat-divider { height: 30px; }
+  .trust-stat-num { font-size: 1.5rem; }
   .footer-buttons { flex-direction: column; width: 100%; }
   .footer-btn { width: 100%; justify-content: center; }
   .container { padding: 0 22px; }
@@ -969,18 +1001,27 @@ p { color: var(--color-ink-soft); }
               WhatsApp me
             </a>
           </div>
-          <div class="hero-trust">
-            <div class="trust-stars">★★★★★</div>
-            <p>Trusted by students from <strong>12+ countries</strong></p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- LOGOS / STRIP -->
-    <section class="strip">
-      <div class="container strip-inner">
-        <p>From Buenos Aires to your living room — Spanish lessons for travel, work, exams, and real life</p>
+    <!-- TRUST STATS -->
+    <section class="trust-stats">
+      <div class="container trust-stats-inner reveal">
+        <div class="trust-stat">
+          <span class="trust-stat-num">10+</span>
+          <span class="trust-stat-label">Years teaching</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat">
+          <span class="trust-stat-num">12+</span>
+          <span class="trust-stat-label">Countries reached</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat">
+          <span class="trust-stat-num">★★★★★</span>
+          <span class="trust-stat-label">Rated by students</span>
+        </div>
       </div>
     </section>
 
