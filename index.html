@@ -61,8 +61,8 @@
   }
   .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(47,143,224,0.3);}
   .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 14px 30px rgba(47,143,224,0.38);}
-  .btn-outline{border:1.5px solid transparent;color:var(--accent-deep);background:var(--accent-tint);}
-  .btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px);}
+  .btn-outline{border:1.8px solid var(--ink);color:var(--ink);background:var(--white);}
+  .btn-outline:hover{background:var(--ink);color:#fff;transform:translateY(-2px);}
   .btn-small{padding:12px 22px;font-size:0.9rem;}
 
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
@@ -80,6 +80,16 @@
   .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
   .hero-copy .eyebrow{justify-content:flex-start;}
   .hero-copy h1{font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.14;margin-bottom:20px;}
+  .es-gradient{
+    background:linear-gradient(90deg, #C60B1E 0%, #FFC400 45%, #C60B1E 100%);
+    background-size:200% auto;
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    animation:esShimmer 5s ease-in-out infinite;
+  }
+  @keyframes esShimmer{
+    0%, 100%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+  }
   .hero-copy .lead{font-size:1.12rem;color:var(--gray);max-width:480px;margin-bottom:34px;}
   .hero-cta{display:flex;flex-direction:column;gap:12px;max-width:340px;}
   .hero-cta .btn-primary{width:100%;}
@@ -181,7 +191,7 @@
 <header id="topbar">
   <div class="wrap topbar-inner">
     <a href="#hero" class="brand">Cristian <span style="font-size:1rem;">🇦🇷</span></a>
-    <a class="btn btn-primary btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 <span class="btn-text-full">Book a Free Trial</span></a>
+    <a class="btn btn-primary btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 <span class="btn-text-full">Book a Free Trial Lesson</span></a>
   </div>
 </header>
 
@@ -190,10 +200,10 @@
   <div class="wrap hero-grid">
     <div class="hero-copy reveal in">
       <div class="eyebrow">Native Spanish Teacher 🇦🇷 · Cristian</div>
-      <h1>Learn Spanish. Speak with Confidence.</h1>
+      <h1><span class="es-gradient">Learn Spanish</span><br>Speak with Confidence</h1>
       <p class="lead">Private 1:1 online Spanish lessons designed around your level, goals and learning pace.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial</a>
+        <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
         <div class="hero-cta-secondary">
           <a class="btn btn-outline" href="https://wa.me/5548998163063?text=Hello%20Cristian%2C%20I%20would%20like%20to%20learn%20Spanish%20with%20you" target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn btn-outline" href="https://www.instagram.com/spanishteachercristian/" target="_blank" rel="noopener">Instagram</a>
@@ -213,7 +223,7 @@
   <div class="wrap reveal">
     <h2>Try a Free Spanish Lesson</h2>
     <p>Meet me, experience my teaching style, and let's talk about your Spanish goals.</p>
-    <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book Your Free Trial</a>
+    <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book Your Free Trial Lesson</a>
   </div>
 </section>
 
@@ -228,18 +238,18 @@
       <div class="price-card reveal">
         <div class="lessons">12 Lessons</div>
         <div class="price">$300<span> USD</span></div>
-        <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial</a>
+        <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
       </div>
       <div class="price-card popular reveal">
         <div class="badge">⭐ MOST POPULAR</div>
         <div class="lessons">20 Lessons</div>
         <div class="price">$400<span> USD</span></div>
-        <a class="btn btn-primary btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial</a>
+        <a class="btn btn-primary btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
       </div>
       <div class="price-card reveal">
         <div class="lessons">25 Lessons</div>
         <div class="price">$495<span> USD</span></div>
-        <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial</a>
+        <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
       </div>
     </div>
     <p class="pricing-note">All lessons are private, personalized and online.</p>
@@ -297,7 +307,7 @@
   <div class="wrap reveal">
     <h2>Ready to Start Speaking Spanish? 🇪🇸</h2>
     <p>Book your free trial lesson and let's start working on your Spanish together.</p>
-    <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book Your Free Trial</a>
+    <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book Your Free Trial Lesson</a>
     <div class="hero-cta-secondary">
       <a class="btn btn-outline" href="https://wa.me/5548998163063?text=Hello%20Cristian%2C%20I%20would%20like%20to%20learn%20Spanish%20with%20you" target="_blank" rel="noopener">💬 Message me on WhatsApp</a>
       <a class="btn btn-outline" href="https://www.instagram.com/spanishteachercristian/" target="_blank" rel="noopener">📸 Follow me on Instagram</a>
