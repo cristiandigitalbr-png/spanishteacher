@@ -108,7 +108,7 @@
   #trial p{margin:14px auto 30px;color:var(--gray);font-size:1.05rem;max-width:480px;}
 
   /* ===== PRICING ===== */
-  .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch;}
+  .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch;max-width:880px;margin:0 auto;}
   .price-card{
     border:1.5px solid var(--line);border-radius:16px;padding:36px 28px;text-align:center;
     display:flex;flex-direction:column;transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -125,6 +125,7 @@
   .price-card .lessons{font-size:1.02rem;color:var(--gray);font-weight:500;margin-bottom:10px;}
   .price-card .price{font-family:var(--font-display);font-size:2.4rem;font-weight:800;color:var(--ink);}
   .price-card .price span{font-size:1rem;font-weight:600;color:var(--gray);}
+  .price-card .per-lesson{font-size:0.9rem;color:var(--gray);margin-top:6px;}
   .price-card .btn{margin-top:24px;}
   .pricing-note{text-align:center;color:var(--gray);font-size:0.95rem;margin-top:36px;}
 
@@ -197,7 +198,7 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width:960px){
-    .pricing-grid{grid-template-columns:repeat(2,1fr);max-width:520px;margin-left:auto;margin-right:auto;}
+    .pricing-grid{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto;}
   }
   @media (max-width:860px){
     .mastery-card{padding:34px 24px;}
@@ -271,24 +272,22 @@
     </div>
     <div class="pricing-grid">
       <div class="price-card reveal">
-        <div class="lessons">6 Lessons</div>
-        <div class="price">$180<span> USD</span></div>
-        <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
-      </div>
-      <div class="price-card reveal">
         <div class="lessons">12 Lessons</div>
-        <div class="price">$297<span> USD</span></div>
+        <div class="price">$216<span> USD</span></div>
+        <div class="per-lesson">Equivalent to $18 per lesson</div>
         <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
       </div>
       <div class="price-card popular reveal">
         <div class="badge">⭐ MOST POPULAR</div>
         <div class="lessons">20 Lessons</div>
-        <div class="price">$397<span> USD</span></div>
+        <div class="price">$330<span> USD</span></div>
+        <div class="per-lesson">Equivalent to $16.50 per lesson</div>
         <a class="btn btn-primary btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
       </div>
       <div class="price-card reveal">
-        <div class="lessons">25 Lessons</div>
-        <div class="price">$495<span> USD</span></div>
+        <div class="lessons">30 Lessons</div>
+        <div class="price">$435<span> USD</span></div>
+        <div class="per-lesson">Equivalent to $14.50 per lesson</div>
         <a class="btn btn-outline btn-small" href="https://calendly.com/spanishwithcristian/trialclass" target="_blank" rel="noopener">📅 Book a Free Trial Lesson</a>
       </div>
     </div>
