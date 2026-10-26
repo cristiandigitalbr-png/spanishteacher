@@ -227,6 +227,14 @@
     .why-grid{grid-template-columns:1fr;}
     .topbar-inner .btn span.btn-text-full{display:none;}
   }
+
+  /* ===== PULSE CTA ===== */
+  .btn-pulse{position:relative;animation:ctaPulse 2s ease-in-out infinite;}
+  .btn-pulse::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(47,143,224,0.55);animation:ctaRing 2s ease-out infinite;pointer-events:none;}
+  .btn-pulse:hover{animation-play-state:paused;}
+  @keyframes ctaPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.045);}}
+  @keyframes ctaRing{0%{box-shadow:0 0 0 0 rgba(47,143,224,0.55);}70%{box-shadow:0 0 0 16px rgba(47,143,224,0);}100%{box-shadow:0 0 0 0 rgba(47,143,224,0);}}
+  @media (prefers-reduced-motion:reduce){.btn-pulse,.btn-pulse::after{animation:none;}}
 </style>
 </head>
 <body>
@@ -246,7 +254,7 @@
       <h1><span class="es-gradient">Learn Spanish</span><br>Speak with Confidence</h1>
       <p class="lead">Private 1:1 online Spanish lessons designed around your level, goals and learning pace.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://calendly.com/spanishwithcristian/free-level-assessment" target="_blank" rel="noopener">📅 Book Your Free Level Assessment</a>
+        <a class="btn btn-primary btn-pulse" href="https://calendly.com/spanishwithcristian/free-level-assessment" target="_blank" rel="noopener">📅 Book Your Free Level Assessment</a>
         <div class="hero-cta-secondary">
           <a class="btn btn-outline" href="https://wa.me/5548998163063?text=Hello%20Cristian%2C%20I%20would%20like%20to%20learn%20Spanish%20with%20you" target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn btn-outline" href="https://www.instagram.com/spanishteachercristian/" target="_blank" rel="noopener">Instagram</a>
